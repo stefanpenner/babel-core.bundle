@@ -1,0 +1,20 @@
+{
+  "name": "babel-core.bundle",
+  "version": "1.0.0",
+  "main": "dist/babel-core.bundle.js",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "webpack": "^4.29.3",
+    "webpack-cli": "^3.2.3"
+  },
+  "files": [
+    "dist/babel-core.bundle.js"
+  ],
+  "scripts": {
+    "build": "webpack -c webpack.config.js",
+    "test": "mocha test"
+  }
+}
