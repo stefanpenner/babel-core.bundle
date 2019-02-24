@@ -1,12 +1,15 @@
 const { expect } = require('chai');
 
 describe('bundled babel', function() {
-  console.time('load babel-core.bundle.js')
-  require('.').transformSync('1+1');
+  it('works', function() {
+    console.time('load babel-core.bundle.js')
+    require('.').transformSync('1+1');
+    expect(eval(require('.').transformSync('1+1').code)).to.eql(2);
 
-  console.timeEnd('load babel-core.bundle.js')
+    console.timeEnd('load babel-core.bundle.js')
 
-  console.time('load babel-core')
-  require('@babel/core').transformSync('1+1');
-  console.timeEnd('load babel-core')
+    console.time('load babel-core')
+    expect(eval(require('@babel/core').transformSync('1+1').code)).to.eql(2);
+    console.timeEnd('load babel-core')
+  });
 });
