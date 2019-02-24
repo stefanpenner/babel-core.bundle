@@ -1,5 +1,5 @@
 module.exports = {
-  entry: require.resolve('babel-core'),
+  entry: require.resolve('@babel/core'),
   target: 'node',
   output: {
     filename: 'babel-core.bundle.js',
